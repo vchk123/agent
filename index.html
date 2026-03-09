@@ -1,375 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Brand</title>
 
-<style>
+<title>Ultra Apple Clone</title>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+<link rel="stylesheet" href="style.css">
 
-body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-color:#1d1d1f;
-background:white;
-overflow-x:hidden;
-}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-/* NAVBAR */
-
-.nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(20px);
-border-bottom:1px solid #eee;
-transition:.3s;
-z-index:999;
-}
-
-.nav.scrolled{
-background:rgba(255,255,255,0.95);
-}
-
-.nav-inner{
-max-width:1100px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:12px 20px;
-}
-
-.links a{
-margin:0 12px;
-font-size:13px;
-text-decoration:none;
-color:#1d1d1f;
-}
-
-/* HERO VIDEO */
-
-.hero{
-height:100vh;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-}
-
-.hero video{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:-1;
-}
-
-.hero h1{
-font-size:72px;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:26px;
-margin-bottom:20px;
-}
-
-.cta{
-display:flex;
-gap:20px;
-justify-content:center;
-}
-
-.cta a{
-font-size:18px;
-color:white;
-text-decoration:none;
-}
-
-/* SECTIONS */
-
-.section{
-padding:120px 20px;
-text-align:center;
-}
-
-.section h2{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.section p{
-font-size:22px;
-color:#6e6e73;
-margin-bottom:30px;
-}
-
-/* PRODUCT GRID */
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-padding:12px;
-}
-
-.card{
-height:500px;
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-transition:.4s;
-}
-
-.card:hover{
-transform:scale(1.02);
-}
-
-/* FADE ANIMATION */
-
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:all 1s ease;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* FOOTER */
-
-.footer{
-background:#f5f5f7;
-padding:40px 20px;
-}
-
-.footer-inner{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:20px;
-}
-
-.footer h4{
-font-size:14px;
-margin-bottom:10px;
-}
-
-.footer a{
-display:block;
-font-size:13px;
-color:#6e6e73;
-text-decoration:none;
-margin-bottom:6px;
-}
-
-.footer-bottom{
-max-width:1100px;
-margin:20px auto 0;
-font-size:12px;
-color:#86868b;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.footer-inner{
-grid-template-columns:1fr 1fr;
-}
-
-}
-
-</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<header class="nav">
 
-<div class="nav" id="nav">
 <div class="nav-inner">
 
-<div>Logo</div>
+<div class="logo">Logo</div>
 
-<div class="links">
+<nav>
 <a href="#">Store</a>
 <a href="#">Products</a>
 <a href="#">Support</a>
-</div>
+</nav>
 
 </div>
-</div>
 
-<!-- HERO VIDEO -->
+</header>
+
+<!-- HERO -->
 
 <section class="hero">
 
-<video autoplay muted loop>
-<source src="your-video.mp4" type="video/mp4">
-</video>
+<h1 class="hero-title">Next Generation Device</h1>
 
-<div>
+<p class="hero-sub">Power. Performance. Perfection.</p>
 
-<h1>Product Name</h1>
+<img src="images/device1.png" class="hero-device">
 
-<p>Your powerful tagline</p>
+</section>
 
-<div class="cta">
-<a href="#">Learn more ></a>
-<a href="#">Buy ></a>
-</div>
+<!-- PINNED STORY -->
+
+<section class="story">
+
+<div class="story-inner">
+
+<h2 class="story-title">A New Era of Design</h2>
+
+<img src="images/device2.png" class="story-device">
 
 </div>
 
 </section>
 
-<!-- SECTION -->
+<!-- ZOOM SECTION -->
 
-<section class="section fade">
+<section class="zoom">
 
-<h2>Amazing Feature</h2>
-
-<p>Describe your feature here.</p>
+<img src="images/device3.png" class="zoom-device">
 
 </section>
 
-<!-- PRODUCT GRID -->
+<!-- TEXT STORY -->
 
-<section class="grid">
+<section class="text-section">
 
-<div class="card fade" style="background-image:url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8')">
+<h2>Performance Redefined</h2>
 
-<h2>Product</h2>
-
-<div class="cta">
-<a href="#">Learn more ></a>
-<a href="#">Buy ></a>
-</div>
-
-</div>
-
-<div class="card fade" style="background-image:url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853')">
-
-<h2>Product</h2>
-
-<div class="cta">
-<a href="#">Learn more ></a>
-<a href="#">Buy ></a>
-</div>
-
-</div>
+<p>
+Describe your product experience here.
+This section mimics the storytelling used on Apple product pages.
+</p>
 
 </section>
 
-<!-- FOOTER -->
-
-<div class="footer">
-
-<div class="footer-inner">
-
-<div>
-<h4>Shop</h4>
-<a href="#">Product</a>
-<a href="#">Product</a>
-<a href="#">Product</a>
-</div>
-
-<div>
-<h4>Services</h4>
-<a href="#">Service</a>
-<a href="#">Service</a>
-<a href="#">Service</a>
-</div>
-
-<div>
-<h4>Account</h4>
-<a href="#">Manage</a>
-<a href="#">Orders</a>
-<a href="#">Support</a>
-</div>
-
-<div>
-<h4>Company</h4>
-<a href="#">About</a>
-<a href="#">News</a>
-<a href="#">Careers</a>
-</div>
-
-<div>
-<h4>Support</h4>
-<a href="#">Help</a>
-<a href="#">Contact</a>
-<a href="#">Guide</a>
-</div>
-
-</div>
-
-<div class="footer-bottom">
+<footer>
 
 © 2026 Your Company
 
-</div>
+</footer>
 
-</div>
-
-<script>
-
-/* NAVBAR SCROLL EFFECT */
-
-window.addEventListener("scroll",()=>{
-const nav=document.getElementById("nav")
-if(window.scrollY>50){
-nav.classList.add("scrolled")
-}else{
-nav.classList.remove("scrolled")
-}
-})
-
-/* SCROLL FADE */
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show")
-}
-})
-})
-
-document.querySelectorAll(".fade").forEach(el=>{
-observer.observe(el)
-})
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
